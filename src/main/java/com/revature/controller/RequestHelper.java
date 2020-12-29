@@ -20,13 +20,13 @@ public class RequestHelper {
 				case currentAPI + "/api/Food":
 					switch(req.getMethod()) {
 						case "POST":
-							FoodController.postPlanet(req, resp);
+							FoodController.postFood(req, resp);
 							break;
 						case "GET":
-							FoodController.getPlanet(req, resp);
+							FoodController.getFood(req, resp);
 							break;
 						case "DELETE":
-							FoodController.deletePlanet(req, resp);
+							oodController.deleteFood(req, resp);
 							break;
 						case "PUT":
 							break;
