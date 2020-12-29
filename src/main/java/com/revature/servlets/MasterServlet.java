@@ -1,4 +1,4 @@
-package com.revature.servlet;
+package com.revature.servlets;
 
 import java.io.IOException;
 
