@@ -10,6 +10,12 @@ public class User {
 		this.username = usernmame;
 		this.password = password;
 	}
+	
+	public User(String usernmame) {
+		super();
+		this.username = usernmame;
+		this.password = "384u59890";
+	}
 
 	public User() {
 		super();

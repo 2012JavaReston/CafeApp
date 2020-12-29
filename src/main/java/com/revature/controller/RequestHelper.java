@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class RequestHelper {
-	static String currentAPI = "CafeProject2";
 	
 	public static void process(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -17,7 +16,7 @@ public class RequestHelper {
 			String endpoint = req.getRequestURI();
 			
 			switch(endpoint) {
-				case currentAPI + "/api/Food":
+				case "CafeProject2/api/Food":
 					switch(req.getMethod()) {
 						case "POST":
 							FoodController.postFood(req, resp);
@@ -26,22 +25,22 @@ public class RequestHelper {
 							FoodController.getFood(req, resp);
 							break;
 						case "DELETE":
-							oodController.deleteFood(req, resp);
+							FoodController.deleteFood(req, resp);
 							break;
 						case "PUT":
 							break;
 					}
 					break;
-				case currentAPI + "/api/home":
+				case "CafeProject2/api/home":
 					HomeController.getHomePage(req, resp);
 					break;
-				case currentAPI + "/api/landing":
+				case "CafeProject2/api/landing":
 					LoginController.getLandingPage(req,resp);
 					break;
-				case currentAPI + "/api/login":
+				case "CafeProject2/api/login":
 					LoginController.login(req,resp);
 					break;
-				case currentAPI + "/api/logout":
+				case "CafeProject2/api/logout":
 					LoginController.logout(req, resp);
 					break;
 //				default:

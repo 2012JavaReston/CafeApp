@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.revature.dao.*
+import com.revature.dao.*;
 import com.revature.models.Foods;
 
 public class FoodController {
-	private static FoodDao foodDao = new FoodDaoImp(); 
+	private static FoodsDao foodsDao = new FoodsDaoImpl(); 
 
 	public static void getFood(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 		
@@ -21,7 +21,7 @@ public class FoodController {
 			
 			String foodName = req.getParameter("name"); 
 			
-			food = foodDao.findFoodByName(foodName);
+			food = foodsDao.findFoodByName(foodName);
 			
 			ObjectMapper om = new ObjectMapper(); 
 			resp.getWriter().write(om.writeValueAsString(food));
@@ -42,12 +42,12 @@ public class FoodController {
 			ObjectMapper om = new ObjectMapper(); 
 			Foods food = om.readValue(req.getReader(), com.revature.models.Foods.class); 
 			
-			foodDao.createFood(food); 
+			foodsDao.createFood(food); 
 			
 			resp.setStatus(201);
 			
 		} else {
-			resp.getStatus(405); 
+			resp.setStatus(405); 
 			System.out.println("Could not create new Food Item");
 		}
 		
@@ -59,7 +59,7 @@ public class FoodController {
 			ObjectMapper om = new ObjectMapper(); 
 			Foods food = om.readValue(req.getReader(), com.revature.models.Foods.class); 
 			
-			foodDao.removeFood(food); 
+			foodsDao.removeFood(food); 
 			
 		}else {
 			System.out.println("Was not successful delete");
