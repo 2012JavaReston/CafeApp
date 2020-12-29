@@ -16,3 +16,4 @@ Model
 Backend
 	- Food/Menu manipulation and functionality
 	
+Frontend - Marc
