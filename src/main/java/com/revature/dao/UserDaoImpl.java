@@ -1,15 +1,29 @@
 package com.revature.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.revature.models.User;
 
 public class UserDaoImpl implements UserDao {
 
+	private static List<User> userList = new ArrayList<>();
+	
 	@Override
-	public boolean createUser(User u) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean createUser(User newUser) {
+		boolean found = false;
+		boolean result = false;
+		for(User u : userList) {
+			if(u.getUsername().equals(newUser.getUsername())) {
+				found = true;
+				break;
+			}
+		}
+		if(!found) {
+			userList.add(newUser);
+			result = true;
+		}
+		return result;
 	}
 
 	@Override

@@ -2,12 +2,12 @@ package com.revature.models;
 
 public class User {
 
-	private String usernmame;
+	private String username;
 	private String password;
 	
 	public User(String usernmame, String password) {
 		super();
-		this.usernmame = usernmame;
+		this.username = usernmame;
 		this.password = password;
 	}
 
@@ -16,12 +16,12 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getUsernmame() {
-		return usernmame;
+	public String getUsername() {
+		return username;
 	}
 
 	public void setUsernmame(String usernmame) {
-		this.usernmame = usernmame;
+		this.username = usernmame;
 	}
 
 	public String getPassword() {
@@ -34,7 +34,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [usernmame=" + usernmame + ", password=" + password + "]";
+		return "User [username=" + username + ", password=" + password + "]";
 	}
 	
 }
