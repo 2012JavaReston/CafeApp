@@ -4,14 +4,14 @@ Cafe App with Servlets
 Controllers
     - Home Page
     - Login Page
-    - Food Controller
-    - Request Helper
+    - Food Controller (Lester)
+    - Request Helper  (Calvin)
 
 Dao
-	- Food Dao
+	- Food Dao (Anthony)
 
 Model
-	- User
+	- User     (Anthony)
 	
 Backend
 	- Food/Menu manipulation and functionality
