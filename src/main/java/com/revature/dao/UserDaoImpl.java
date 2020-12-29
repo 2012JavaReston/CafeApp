@@ -28,26 +28,45 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public User selectUserByUsername(String n) {
-		// TODO Auto-generated method stub
-		return null;
+		User result = null;
+		for(User u : userList) {
+			if(u.getUsername().equals(n)) {
+				result = u;
+				break;
+			}
+		}
+		return result;
 	}
 
 	@Override
 	public List<User> selectAllUsers() {
-		// TODO Auto-generated method stub
-		return null;
+		return userList;
 	}
 
 	@Override
-	public boolean updateUser(User u) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean updateUser(User user) {
+		boolean result = false;
+		for(User u : userList) {
+			if(u.getUsername().equals(user.getUsername())) {
+				u = user;
+				result = true;
+				break;
+			}
+		}
+		return result;
 	}
 
 	@Override
-	public boolean deleteUser(User u) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean deleteUser(User user) {
+		boolean result = false;
+		for(User u : userList) {
+			if(u.getUsername().equals(user.getUsername()) && u.getPassword().equals(user.getPassword())) {
+				userList.remove(u);
+				result = true;
+				break;
+			}
+		}
+		return result;
 	}
 
 }
