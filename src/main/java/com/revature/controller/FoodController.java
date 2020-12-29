@@ -1,4 +1,4 @@
-package com.revature.controllers;
+package com.revature.controller;
 
 import java.io.IOException;
 
@@ -10,12 +10,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.dao.*
 import com.revature.models.Foods;
 
-public class FoodControler {
+public class FoodController {
 	private static FoodDao foodDao = new FoodDaoImp(); 
 
 	public static void getFood(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
 		
-		if(req.getMethod().equals("GGET")) {
+		if(req.getMethod().equals("GET")) {
 			Foods food = null; 
 			resp.setContentType("application/json"); 
 			
