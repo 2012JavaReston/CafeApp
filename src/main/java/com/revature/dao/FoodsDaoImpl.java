@@ -7,13 +7,13 @@ import com.revature.models.Foods;
 public class FoodsDaoImpl implements FoodsDao {
 
 	@Override
-	public boolean createFoods(Foods f) {
+	public boolean createFood(Foods f) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public Foods selectFoodsByName(String n) {
+	public Foods findFoodByName(String n) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -31,7 +31,7 @@ public class FoodsDaoImpl implements FoodsDao {
 	}
 
 	@Override
-	public boolean deleteFoods(Foods f) {
+	public boolean removeFood(Foods f) {
 		// TODO Auto-generated method stub
 		return false;
 	}
