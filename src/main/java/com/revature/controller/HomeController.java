@@ -12,7 +12,7 @@ public class HomeController {
 			throws ServletException, IOException{
 		// checking that session exists and session attributes match (access - true)
 		if(req.getSession(false) != null) {
-			RequestDispatcher redis = req.getRequestDispatcher("/index.html");
+			RequestDispatcher redis = req.getRequestDispatcher("/login.html");
 			System.out.println("Logging in !");
 			redis.forward(req, resp);
 //			resp.sendRedirect("http://localhost:8080/PlanetAPI/index.html");
