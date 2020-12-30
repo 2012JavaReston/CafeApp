@@ -26,22 +26,22 @@ public class LoginController {
 					sesh.setAttribute("MasterAccess", true);
 					
 					//we will redirect to the homecontroller!
-					resp.sendRedirect("http://localhost:8080/CafeProject2/api/home");
+					resp.sendRedirect("http://localhost:8080/CafeProject/home");
 			}else {
 				resp.setStatus(403);
-				resp.sendRedirect("http://localhost:8080/CafeProject2/api/home");
+				resp.sendRedirect("http://localhost:8080/CafeProject/home");
 			}
 			
 		}else {
 			resp.setStatus(405);
-			resp.sendRedirect("http://localhost:8080/CafeProject2/api/home");
+			resp.sendRedirect("http://localhost:8080/CafeProject/home");
 		}
 		
 	}
 
 	public static void logout(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.getSession().invalidate();
-		resp.sendRedirect("http://localhost:8080/CafeProject2/api/home");
+		resp.sendRedirect("http://localhost:8080/CafeProject/logout");
 	}
 	
 	public static void getLandingPage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
