@@ -16,7 +16,7 @@ public class RequestHelper {
 			String endpoint = req.getRequestURI();
 			
 			switch(endpoint) {
-				case "CafeProject2/api/Food":
+				case "/CafeProject":
 					switch(req.getMethod()) {
 						case "POST":
 							FoodController.postFood(req, resp);
@@ -31,16 +31,16 @@ public class RequestHelper {
 							break;
 					}
 					break;
-				case "CafeProject2/api/home":
+				case "CafeProject/home":
 					HomeController.getHomePage(req, resp);
 					break;
-				case "CafeProject2/api/landing":
+				case "CafeProject/landing":
 					LoginController.getLandingPage(req,resp);
 					break;
-				case "CafeProject2/api/login":
+				case "/CafeProject/login":
 					LoginController.login(req,resp);
 					break;
-				case "CafeProject2/api/logout":
+				case "/CafeProject/logout":
 					LoginController.logout(req, resp);
 					break;
 //				default:
