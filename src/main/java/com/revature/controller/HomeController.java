@@ -15,11 +15,10 @@ public class HomeController {
 			RequestDispatcher redis = req.getRequestDispatcher("/login.html");
 			System.out.println("Logging in !");
 			redis.forward(req, resp);
-//			resp.sendRedirect("http://localhost:8080/PlanetAPI/index.html");
 		}else {
-			resp.sendRedirect("http://localhost:8080/CafeProject2/api/landing");
+			resp.sendRedirect("http://localhost:8080/CafeProject/cafe/landing");
 		}
-//		resp.setStatus(403);
+
 		
 		
 	}

@@ -11,7 +11,6 @@ import javax.servlet.http.HttpSession;
 import com.revature.service.CafeService;
 
 public class LoginController {
-	static String currentAPI = "CafeProject2";
 	
 	public static void login(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
@@ -26,22 +25,22 @@ public class LoginController {
 					sesh.setAttribute("MasterAccess", true);
 					
 					//we will redirect to the homecontroller!
-					resp.sendRedirect("http://localhost:8080/CafeProject/home");
+					resp.sendRedirect("http://localhost:8080/CafeProject/cafe/home");
 			}else {
 				resp.setStatus(403);
-				resp.sendRedirect("http://localhost:8080/CafeProject/home");
+				resp.sendRedirect("http://localhost:8080/CafeProject/cafe/home");
 			}
 			
 		}else {
 			resp.setStatus(405);
-			resp.sendRedirect("http://localhost:8080/CafeProject/home");
+			resp.sendRedirect("http://localhost:8080/CafeProject/cafe/home");
 		}
 		
 	}
 
 	public static void logout(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		req.getSession().invalidate();
-		resp.sendRedirect("http://localhost:8080/CafeProject/logout");
+		resp.sendRedirect("http://localhost:8080/CafeProject/cafe/logout");
 	}
 	
 	public static void getLandingPage(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

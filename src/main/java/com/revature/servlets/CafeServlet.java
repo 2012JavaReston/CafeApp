@@ -17,10 +17,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.models.Foods;
 
 
-
-
-
-
 public class CafeServlet extends HttpServlet{
 	private static List<Foods>foods= new ArrayList<Foods>(); 
 	
