@@ -10,7 +10,7 @@ public interface FoodsDao {
 	public boolean createFood(Foods f);
 	
 	//READ
-	public Foods findFoodByName(String n);
+	public Foods selectFoodByName(String n);
 	
 	public List<Foods> selectAllFoods();
 	
