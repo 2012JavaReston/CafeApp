@@ -21,7 +21,7 @@ public class FoodController {
 			
 			String foodName = req.getParameter("name"); 
 			
-			food = foodsDao.findFoodByName(foodName);
+			food = foodsDao.selectFoodByName(foodName);
 			
 			ObjectMapper om = new ObjectMapper(); 
 			resp.getWriter().write(om.writeValueAsString(food));
